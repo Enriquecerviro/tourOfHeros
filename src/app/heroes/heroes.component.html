@@ -4,21 +4,15 @@
 to listen for the <li> element's click event.
  When the user clicks in the <li>, Angular executes the
 onSelect(hero) expression.
-When the current row hero is the same as the
-selectedHero, Angular adds the selected CSS class.
-When the two heroes are different, Angular removes
-the class. The Angular class binding makes it easy to add and 
-remove a CSS class conditionally.
 Just add [class.some-css-class]="some-condition" to
-the element you want to style.-->
-  <li *ngFor="let hero of heroes"
-    [class.selected]="hero === selectedHero"
-    (click)="onSelect(hero)">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
+the element you want to style.
+  [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)"-->
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
   </li>
 </ul>
 
-<!-- Bind the HeroesComponent.selectedHero to
-  the element's hero property like this.-->
-<app-hero-detail [hero]="selectedHero">
-</app-hero-detail>
+

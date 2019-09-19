@@ -21,12 +21,17 @@ import { MessageService} from './message.service';
 
 export class HeroService {
 
-  getHeroes(): Observable<Hero[]> {
-    this.MessageService.add('HeroService: fetched heroes');
-    return of(HEROES);
-  }
-
-  constructor(private MessageService: MessageService) { }
+  constructor(private messageService: MessageService) { }
 //Reserve the constructor for simple initialization such as wiring constructor parameters to properties. 
+
+    getHeroes(): Observable<Hero[]> {
+      this.messageService.add('HeroService: fetched heroes');
+      return of(HEROES);
+    }
+    getHero(id: number): Observable<Hero> {
+      // TODO: send the message _after_ fetching the hero
+      this.messageService.add(`HeroService: fetched hero id=${id}`);
+      return of(HEROES.find(hero => hero.id === id));
+    }
 
 }

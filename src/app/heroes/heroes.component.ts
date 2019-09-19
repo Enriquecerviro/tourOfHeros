@@ -13,7 +13,6 @@ export class HeroesComponent implements OnInit {
    * PARA ATARLO EN UNA VAR.
    */
   heroes : Hero[];
-  selectedHero: Hero;//selectedHero TENDRA UN ID Y UN NOMBRE
 /**
  * The parameter simultaneously defines a private
  *  heroService property and identifies it as a
@@ -26,9 +25,7 @@ export class HeroesComponent implements OnInit {
   ngOnInit() {
     this.getHeroes();
   }
-  onSelect(hero: Hero): void{
-    this.selectedHero = hero;
-  }
+
 /**
  waits for the Observable to emit the array of heroes 
  which could happen now or several minutes from now.

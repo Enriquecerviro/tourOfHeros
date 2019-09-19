@@ -13,7 +13,7 @@ import { MessageService } from '../message.service';
 })
 export class MessagesComponent implements OnInit {
 
-  constructor(public MessageService: MessageService) { }
+  constructor(public messageService: MessageService) { }
 //Reserve the constructor for simple initialization such as wiring constructor parameters to properties. 
 /**
  * The messageService property must be public
