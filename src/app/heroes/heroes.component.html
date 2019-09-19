@@ -1,1 +1,22 @@
-<p>heroes works!</p>
+<h2>My Heroes</h2>
+<!--ESTE SNIPPET LO QUE HACE ES DEFINIR LOS DETALLES
+DE HEROES MEDIANTE UNA BADGE Y NOS SIRVE PARA MOSTRAR TODOS
+LOS DETALLES DE LOS HEROES CON NG LET HERO OF HEROES-->
+<ul class="heroes">
+  <!-- <LI> COMO ELEMENTO HOST Y heroes TIENE LA LISTA DE MOCKHEROES
+    DEL COMPONENTE HEROES, MIENTRAS QUE hero TIENE EL OBJETO HERO ACTUAL
+  PARA CADA ITERACCION DE LA LISTA
+When the current row hero is the same as the
+selectedHero, Angular adds the selected CSS class.
+When the two heroes are different, Angular removes
+the class.-->
+<!--The Angular class binding makes it easy to add and 
+  remove a CSS class conditionally.
+  Just add [class.some-css-class]="some-condition" to
+  the element you want to style.-->
+  <li *ngFor="let hero of heroes"
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>

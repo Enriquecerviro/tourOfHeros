@@ -1,0 +1,16 @@
+<!-- ESTA SECCION LO QUE HACE ES CUANDO CLICKAMOS UN HEROE
+REVELE LOS DETALLES/ATRIBUTOS DE ESE HERO.
+*ngIf HACE QUE SOLO SE DISPLAYE EL HEROE SI EXISTE selectedHero, COMO UN IF
+The HeroDetailComponent template binds to the component's
+ hero property which is of type Hero.-->
+<div *ngIf="selectedHero">
+
+        <h2>{{selectedHero.name | uppercase}} Details</h2>
+        <div><span>id: </span>{{selectedHero.id}}</div>
+        <div>
+          <label>name:
+            <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+          </label>
+        </div>
+      
+      </div>
