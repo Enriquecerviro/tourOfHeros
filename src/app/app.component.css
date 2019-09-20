@@ -1,4 +1,14 @@
 /* AppComponent's private CSS styles */
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box div {
+  width: 10px;
+  height: 100px;
+}
 body{
   font-family: 'Permanent Marker', cursive;
 }

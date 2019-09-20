@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -18,6 +19,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.getHeroes();
   }
+ 
 
   getHeroes(): void {
     this.heroService.getHeroes()

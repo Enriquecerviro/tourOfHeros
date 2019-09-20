@@ -6,8 +6,9 @@ When the user picks a hero, selectedHero has a value and
 ngIf puts the hero detail into the DOM.
 The HeroDetailComponent template binds to the component's
  hero property which is of type Hero.-->
+<div class="box">
  <div class="pMarker">
-     <div *ngIf="hero">
+     <div *ngIf="hero" >
 
             <h2>{{hero.name | uppercase}} Details</h2>
             <div><span>id: </span>{{hero.id}}</div>
@@ -18,4 +19,5 @@ The HeroDetailComponent template binds to the component's
             </div>
             <button (click)="goBack()" style="font-family: inherit">go back</button>         
     </div>
+</div>
 </div>
