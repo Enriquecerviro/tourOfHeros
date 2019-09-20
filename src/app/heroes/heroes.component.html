@@ -12,7 +12,15 @@
               (click)="onSelect(hero)"-->
             <li *ngFor="let hero of heroes" >
               <a routerLink="/detail/{{hero.id}}">
-                <span class="badge">{{hero.id}}</span> {{hero.name}}
+                <div style="
+                  width: 50%;
+                  float: left;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis; ">
+                    <span  class="badge">{{hero.id}}</span> {{hero.name}}
+
+                </div>
               </a>
             </li>
           </ul>
