@@ -1,4 +1,8 @@
 /* DashboardComponent's private CSS styles */
+.pMarker {
+  font-family: 'Permanent Marker', cursive;
+}
+
 [class*='col-'] {
     float: left;
     padding-right: 20px;

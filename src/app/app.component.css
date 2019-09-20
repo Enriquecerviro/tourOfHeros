@@ -1,4 +1,7 @@
 /* AppComponent's private CSS styles */
+body{
+  font-family: 'Permanent Marker', cursive;
+}
 h1 {
   font-size: 1.2em;
   margin-bottom: 0;
