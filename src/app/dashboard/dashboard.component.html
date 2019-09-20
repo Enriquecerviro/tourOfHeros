@@ -1,16 +1,30 @@
 <div class="fresca">
-    <h3>Top Heroes</h3>
+  <h3 style="align-content: center">Top Heroes / Top AntiHeroes</h3>
 </div>
 
 <div class="pMarker">
-  <div class="grid grid-pad">
-      <!--repeater creates as many links as
+ 
+    <!--repeater creates as many links as
           are in the component's heroes array.-->
-    <a *ngFor="let hero of heroes" class="col-1-4"
-          routerLink="/detail/{{hero.id}}">
-      <div class="module hero">
-        <h4>{{hero.name}}</h4>
-      </div>
+    <a *ngFor="let hero of heroes;" routerLink="/detail/{{hero.id}}">       
+      <!--ESTE STYLE SIRVE PARA QUE NO SE DEMADRE EL TAMAÑO DE CADA
+      DIV, ELLIPSIS AYUDA EN ESTO-->
+      <div style="
+       width: 50%;
+       float: left;
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;"
+       class="module hero">
+          {{hero.name}}            
+      </div>         
     </a>
-  </div>
+  
 </div>
+<!--
+   <div *ngIf= "ind %2 ==0">
+              <div class="module hero">
+                  {{hero.name}}  
+                </div>
+          </div>
+-->

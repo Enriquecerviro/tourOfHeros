@@ -6,6 +6,7 @@ import { Hero } from './hero';
  * IMPORTARLO EN EL COMPONENETE HEROS PARA USARLO
  */
 export const HEROES: Hero[] = [
+  { id: 10, name: 'IronWMan' },
   { id: 11, name: 'Dr Nice' },
   { id: 12, name: 'Narco' },
   { id: 13, name: 'Bombasto' },

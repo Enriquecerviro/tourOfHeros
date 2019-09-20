@@ -1,19 +1,23 @@
-<div class="pMarker">
-  <h2>My Heroes</h2>
-    <ul class="heroes">
-      <!--The parentheses around click tell Angular
-    to listen for the <li> element's click event.
-    When the user clicks in the <li>, Angular executes the
-    onSelect(hero) expression.
-    Just add [class.some-css-class]="some-condition" to
-    the element you want to style.
-      [class.selected]="hero === selectedHero"
-        (click)="onSelect(hero)"-->
-      <li *ngFor="let hero of heroes" >
-        <a routerLink="/detail/{{hero.id}}">
-          <span class="badge">{{hero.id}}</span> {{hero.name}}
-        </a>
-      </li>
-    </ul>
-  </div>
-
+<div class="box">
+    <div class="pMarker">
+        <h2>My Heroes</h2>
+          <ul class="heroes">
+            <!--The parentheses around click tell Angular
+          to listen for the <li> element's click event.
+          When the user clicks in the <li>, Angular executes the
+          onSelect(hero) expression.
+          Just add [class.some-css-class]="some-condition" to
+          the element you want to style.
+            [class.selected]="hero === selectedHero"
+              (click)="onSelect(hero)"-->
+            <li *ngFor="let hero of heroes" >
+              <a routerLink="/detail/{{hero.id}}">
+                <span class="badge">{{hero.id}}</span> {{hero.name}}
+              </a>
+            </li>
+          </ul>
+        </div>
+    
+    
+</div>
+  
