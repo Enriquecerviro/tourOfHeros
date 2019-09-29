@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .box div {
@@ -39,3 +40,4 @@ nav a:hover {
 nav a.active {
   color: #039be5;
 }
+

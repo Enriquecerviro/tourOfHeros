@@ -11,6 +11,8 @@ import { HeroService } from '../hero.service';
 export class DashboardComponent implements OnInit {
   // heroes array property.
   heroes: Hero[] = [];
+  hero: Hero;
+
 
   //inject the HeroService into a private heroService property.
   constructor(private heroService: HeroService) { }
@@ -23,6 +25,12 @@ export class DashboardComponent implements OnInit {
 
   getHeroes(): void {
     this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes.slice(0, 10));
+      .subscribe(heroes => this.heroes = heroes.slice(0, 5));
   }
+  //PARA MOBILES: aqui si pulsamos el dedo en el div se ve la info
+  //enterea sin truncar la string
+  displayTextMobile() {
+    document.getElementById("module hero").innerHTML = this.hero.name;
+  }
+
 }

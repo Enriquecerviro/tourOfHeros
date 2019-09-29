@@ -7,3 +7,10 @@
 .fresca{
     font-family: "Fresca", normal;
 }
+.colorContainer{
+  width: 100vw;
+  height: 100vh;
+}
+body{
+  background-image: linear-gradient( to right,  #f7fff7, #ffe66d)
+}
